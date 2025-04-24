@@ -1,4 +1,4 @@
-# Using NetworkManager
+# Using NetworkManager Command-Line Tools
 
 NetworkManager provides one command-line interface, `nmcli`.
 

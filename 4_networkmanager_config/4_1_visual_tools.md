@@ -1,4 +1,4 @@
-# Using NetworkManager
+# Using NetworkManager Visual Tools
 
 NetworkManager is configuration manager widely used on desktop distros.
 
