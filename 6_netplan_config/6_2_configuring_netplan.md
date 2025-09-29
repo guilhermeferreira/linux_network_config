@@ -24,6 +24,7 @@ The file `/etc/netplan/00-enp0s2.yaml` uses `systemd-networkd` (the default rend
 
 ```yaml
 network:
+  renderer: networkd
   ethernets:
     enp0s2:
       addresses: [10.10.0.2/24]
