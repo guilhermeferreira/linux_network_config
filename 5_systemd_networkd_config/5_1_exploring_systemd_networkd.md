@@ -5,7 +5,7 @@
 ## Configuration files
 
 Configuration files are named following the pattern `<number>-<iface>.network` (e.g. `10-enp1s0.network`).
-- If we use only `systemd-networkd` to manage the network, files are in `/etc/systemd/network`.
+- If we use only `systemd-networkd` to manage the network, files are in `/etc/systemd/network`, `/lib/systemd/network/`, or `/usr/lib/systemd/network/`.
 - If we use other software (e.g. Netplan) in conjunction with `systemd-networkd`, then files are in `/run/systemd/network`.
 
 ## Tools
