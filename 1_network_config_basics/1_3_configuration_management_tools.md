@@ -1,9 +1,10 @@
 # Network Configuration Management Tools
 
 Configuration management tools store network configuration information and apply it to the interfaces. These tools are:
-- `ifupdown`.
-- `NetworkManager`.
-- `systemd-networkd`.
+- [`ifupdown`](#ifupdown).
+- [`NetworkManager`](#networkmanager).
+- [`systemd-networkd`](#systemd-networkd).
+- [`ConnMan`](#connman).
 
 ## ifupdown
 
@@ -30,3 +31,9 @@ It is a module of `systemd`.
 Widely used on command-line environments (server distros).
 
 Provides tools such as `networkctl`.
+
+## ConnMan
+
+**ConnMan** (Connection Manager) is a lightweight network manager designed primarily for embedded Linux systems.
+
+It was originally part of Intel’s Moblin project (early netbook/mobile Linux effort).

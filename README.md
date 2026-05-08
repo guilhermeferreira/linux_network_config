@@ -26,6 +26,8 @@
 * `systemd-networkd`
   * [Using `systemd-networkd`](5_systemd_networkd_config/5_1_exploring_systemd_networkd.md)
   * [Configuring `systemd-networkd`](5_systemd_networkd_config/5_2_configuring_systemd_networkd.md)
+* ConnMan
+  * [Using ConnMan](8_connman/8_1_connman.md)
 * Netplan
   * [Using Netplan](6_netplan_config/6_1_exploring_netplan.md)
   * [Configuring Netplan](6_netplan_config/6_2_configuring_netplan.md)
