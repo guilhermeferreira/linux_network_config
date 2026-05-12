@@ -41,3 +41,47 @@ Restart the service to apply the configuration.
 ```
 sudo systemctl restart systemd-networkd
 ```
+
+When `DHCP=yes`, `systemd-networkd` will:
+
+1. send `DHCPDISCOVER`
+2. receive `DHCPOFFER`
+3. send `DHCPREQUEST`
+4. receive `DHCPACK`
+5. configure:
+   - IP address
+   - routes
+   - DNS (via `systemd-resolved` if used)
+
+### renew
+
+The command
+
+```
+sudo networkctl renew eth1
+```
+
+makes the client execute a subset of the DHCP messages:
+
+1. send `DHCPREQUEST`
+2. receive `DHCPACK`
+
+### reconfigure
+
+The command
+
+```
+sudo networkctl reconfigure eth1
+```
+
+makes the client execute the entire DHCP flow:
+
+1. send `DHCPRELEASE`
+2. send `DHCPDISCOVER`
+3. receive `DHCPOFFER`
+4. send `DHCPREQUEST`
+5. receive `DHCPACK`
+6. configure:
+   - IP address
+   - routes
+   - DNS (via `systemd-resolved` if used)

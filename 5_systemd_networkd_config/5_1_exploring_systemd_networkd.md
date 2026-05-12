@@ -143,3 +143,9 @@ Typical responsibilities include:
 | `networkctl` | Show all interfaces managed by systemd-networkd |
 | `networkctl status` | Show the status of all interfaces managed by systemd-networkd |
 | `networkctl status <iface>` | Show the status of a single interface managed by systemd-networkd |
+
+Check the interface status.
+
+```
+sudo networkctl status eth1
+```
