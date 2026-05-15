@@ -13,7 +13,6 @@
   * [-](2_manual_config/2_4_ip_display_info.md)
   * [Domain Name System (DNS)](2_manual_config/2_5_dns_config.md)
   * [Dynamic Host onfiguration Protocol (DHCP)](2_manual_config/2_6_dhcp_config.md)
-  * [Wi-Fi](2_manual_config/2_7_wifi_config.md)
 * `ifup`/`ifdown`
   * [Configuring systems using `ifcfg`](3_ifupdown_config/3_1_ifcfg.md)
   * [Configuring systems using ENI](3_ifupdown_config/3_2_eni.md)
@@ -37,3 +36,7 @@
   * [Firewall configuration with UFW](7_hostname_and_firewall/7_3_firewall_ufw.md)
   * [Firewall configuration with Firewalld](7_hostname_and_firewall/7_4_firewall_firewalld.md)
   * [Exploring Sockets](7_hostname_and_firewall/7_5_monitor_port.md)
+* Wi-Fi
+  * [Configuring Wi-Fi](9_wifi/9_1_wifi_config.md)
+  * [Wireless Management](9_wifi/9_2_wireless_management.md)
+  * [Wireless Authentication](9_wifi/9_3_wireless_authentication.md)
