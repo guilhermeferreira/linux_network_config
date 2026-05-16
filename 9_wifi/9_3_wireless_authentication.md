@@ -42,8 +42,13 @@ This tool uses `cfg80211`/`nl80211`.
 | `wpa_passphase <ESSID> > <file>.conf` | Save the password of a given network |
 | `wpa_supplicant -i <wlan-iface> -c <file>.conf` | Connect to a given network |
 | `wpa_supplicant -i <wlan-iface> -c <file>.conf -B` | Connect (on the `b`ackgound) to a given network |
+| `wpa_cli status` | Display connection information |
+| `wpa_cli scan_results` | Display information about nearby wireless networks |
+| `wpa_cli reassociate` | Reconnect the station |
 
 ### Configuration
+
+Assume that `<wlan-iface>` = `wlan0`.
 
 Add the file `/etc/wpa_supplicant/wpa_supplicant-wlan0.conf` for interface-specific WPA supplicant configuration.
 
@@ -57,6 +62,8 @@ network={
     psk="mypassword"
 }
 ```
+
+The `wpa_cli` communicates with `wpa_supplicant` via the socket created at `ctrl_interface`.
 
 Enable the interface-specific WPA supplicant service.
 
@@ -101,6 +108,7 @@ It also uses `cfg80211`/`nl80211`.
 Create the `/etc/hostapd/hostapd.conf` file. The example bellow is for 802.11n (Wi-Fi 4).
 
 ```
+ctrl_interface=/var/run/hostapd
 interface=wlan0
 driver=nl80211
 ssid=MyNetwork
@@ -128,8 +136,10 @@ Start the service.
 sudo systemctl start hostapd
 ```
 
-Check connected stations.
+### Commands
 
-```
-iw dev wlan0 station dump
-```
+| Command | Description |
+|---------|-------------|
+| `hostapd_cli status`  | Runtime status |
+| `hostapd_cli all_sta` | List connected stations |
+| `hostapd_cli deauthenticate <MAC>` | Deauthenticate station |
