@@ -16,8 +16,8 @@ These tools use the old kernel Wireless Extensions (`WEXT`) API.
 
 | Command       | Description |
 |---------------|-------------|
-| `iwlist scan` | Scan nearby wireless networks |
-| `iwconfig`    | Display information about the connection |
+| `iwlist <wlan-iface> scan` | Scan nearby wireless networks |
+| `iwconfig <wlan-iface>`    | Display information about the connection |
 
 
 ## iw
@@ -52,6 +52,10 @@ This tool uses `cfg80211`/`nl80211`, which is a modern replacement for `WEXT`.
 
 | Command | Description |
 |---------|-------------|
-| `iw dev wlan0 scan` | Scan nearby wireless networks |
-| `iw dev wlan0 link` | Display information about the connection |
-| `iw dev wlan0 station dump` | Display stations connected to the AP |
+| `iw dev <wlan-iface> scan` | Scan nearby wireless networks |
+| `iw dev <wlan-iface> link` | Display information about the connection |
+| `iw list`           | Display Wi-Fi capabilities |
+| `iw event`          | Monitor events |
+| `iw dev <wlan-iface> set power_save off` | Disable power save |
+| `iw dev <wlan-iface> get power_save`     | Get power save |
+| `iw dev <wlan-iface> station dump`       | Display stations connected to the AP |
